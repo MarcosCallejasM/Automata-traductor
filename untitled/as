@@ -1,0 +1,31 @@
+
+        //leemos el numero de estados finales
+        fgets(auxS,1024,myFile);
+        numFinales= auxS[0] -'0';
+        //Inicializamos el array de estados finales F
+        fgets(auxS,1024,myFile);
+        int estadosFinales[numFinales];
+        for (int i  = 0; i  < numFinales ; ++i )
+            estadosFinales[i]=auxS[i];
+        //Inicializamos la matriz de transciones del lenguaje
+    char transiciones[estados][TamAlfabeto];
+    for (int i = 0; i < estados ; ++i) {
+        for (int j = 0; j < TamAlfabeto; ++j) {
+            fscanf(myFile,"%c",transiciones[i][j]);
+        }
+    }
+
+
+    //TOKEN separator
+
+       char delimitador[] = ",";
+            char *token = strtok(auxS,delimitador);
+            if (token != NULL){
+                while (token!=NULL){
+                    printf("%s ", token);
+                    char a[2][14];
+                    strcpy(alfabeto[i], "blah");
+                    i++;
+                    token=strtok(NULL,delimitador);
+                }
+            }
